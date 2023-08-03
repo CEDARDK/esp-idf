@@ -141,7 +141,7 @@ extern "C" {
 
 // This allows using enum as flags in C++
 // Format: FLAG_ATTR(flag_enum_t)
-#ifdef __cplusplus
+/*#ifdef __cplusplus
 
 // Inline is required here to avoid multiple definition error in linker
 #define FLAG_ATTR_IMPL(TYPE, INT_TYPE) \
@@ -160,9 +160,9 @@ FORCE_INLINE_ATTR TYPE& operator<<=(TYPE& a, int b) { a = a << b; return a; }
 #define FLAG_ATTR_U32(TYPE) FLAG_ATTR_IMPL(TYPE, uint32_t)
 #define FLAG_ATTR FLAG_ATTR_U32
 
-#else
+#else*/
 #define FLAG_ATTR(TYPE)
-#endif
+//#endif
 
 // Implementation for a unique custom section
 //
