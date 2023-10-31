@@ -21,6 +21,7 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+#include <string.h>
 #include "bt_common.h"
 #include "osi/semaphore.h"
 

@@ -46,7 +46,7 @@ static size_t calculate_database_info_size(void)
                     // Included service declaration
                     len += 8 + p_attr->p_value->incl_handle.service_type.len;
                 } else if (p_attr->uuid == GATT_UUID_CHAR_DECLARE) {
-                    tBT_UUID char_uuid;
+                    tBT_UUID char_uuid = {0};
                     // Characteristic declaration
                     p_attr = (tGATT_ATTR16 *)p_attr->p_next;
                     attr_uuid_to_bt_uuid((void *)p_attr, &char_uuid);
